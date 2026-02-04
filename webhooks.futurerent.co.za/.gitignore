@@ -1,0 +1,9 @@
+/node_modules
+/dist
+.env
+.vercel
+.DS_Store
+.Dockerfile
+logs/activity.log
+logs/app_control.log
+logs/error.log

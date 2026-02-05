@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-import { ActivityLogData } from '../utils/logger/activityLogger';
 
 
 export interface AppError extends Error {
@@ -9,7 +8,6 @@ export interface AppError extends Error {
 declare global {
   namespace Express {
     interface Request {
-      activityLogData?: ActivityLogData;
       requestStartTime?: number;
     }
   }

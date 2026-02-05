@@ -14,7 +14,7 @@ webhooksRouter.post("/", async (req: Request, res: Response) => {
     if (contract.title !== "Vehicle Rental Agreement") return res.sendStatus(200);
     if (status !== "contract-signed") return res.sendStatus(200);
 
-    const contractId = contract.metadata;
+    const contractId = contract.signers[0].company_name;
     const pdfUrl = contract.contract_pdf_url;
 
     if (!pdfUrl) {
